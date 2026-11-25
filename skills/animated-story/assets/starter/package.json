@@ -1,0 +1,29 @@
+{
+  "name": "animated-story-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "stills": "node scripts/stills.mjs",
+    "render": "remotion render src/index.ts Example out/example.mp4 --codec h264 --crf 18 --gl angle --concurrency 50%",
+    "render:no-music": "remotion render src/index.ts Example out/example_no_music.mp4 --codec h264 --crf 18 --gl angle --concurrency 50% --props '{\"audio\":\"mix_no_music.wav\"}'",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/bundler": "4.0.546",
+    "@remotion/cli": "4.0.546",
+    "@remotion/renderer": "4.0.546",
+    "@remotion/three": "4.0.546",
+    "postprocessing": "6.39.6",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.546",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "@types/three": "0.180.0",
+    "typescript": "5.9.3"
+  }
+}
